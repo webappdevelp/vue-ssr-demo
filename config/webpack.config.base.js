@@ -1,11 +1,6 @@
 const path = require('path');
-const webpack = require('webpack');
 const { VueLoaderPlugin } = require('vue-loader');
 const isProd = process.env.NODE_ENV === 'production' ? true : false;
-
-console.log('------------------------- isprod ------------------\n');
-console.log(isProd, '\n');
-console.log('-----------------------------------');
 
 module.exports = {
   mode: isProd ? 'production' : 'development',

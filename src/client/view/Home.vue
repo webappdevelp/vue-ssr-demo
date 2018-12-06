@@ -10,11 +10,17 @@ export default {
   asyncData({ store, route }) {
     return store.dispatch('changeMsg');
   },
-  computed: {
-    info() {
-      return this.$store.state.msg;
+  data() {
+    return {
+      info: this.$store.state.msg
     }
   },
+  /* computed: {
+    info() {
+      console.log('ss');
+      return this.$store.state.msg;
+    }
+  }, */
   mounted() {
     console.log(this.$store);
   }

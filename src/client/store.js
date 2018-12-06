@@ -8,14 +8,15 @@ export function createStore() {
     state: {
       msg: '哈哈'
     },
-    action: {
+    actions: {
       changeMsg({ commit }) {
         commit('editMsg', '真的是')
       }
     },
     mutations: {
       editMsg(state, msg) {
-        Vue.set(state.msg, msg);
+        state.msg = msg;
+        // Vue.set(state, 'msg', msg);
       }
     }
   })
